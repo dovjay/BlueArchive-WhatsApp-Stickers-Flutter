@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trendy_whatsapp_stickers/screens/information_screen.dart';
-import 'package:trendy_whatsapp_stickers/screens/sticker_pack_info.dart';
-import 'package:trendy_whatsapp_stickers/screens/stickers_screen.dart';
+import 'package:bluearchive_whatsapp_stickers/screens/information_screen.dart';
+import 'package:bluearchive_whatsapp_stickers/screens/sticker_pack_info.dart';
+import 'package:bluearchive_whatsapp_stickers/screens/stickers_screen.dart';
 
 enum PopupMenuOptions {
   staticStickers,
@@ -24,10 +24,10 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Trendy WhatsApp Stickers",
+      title: "BlueArchive WhatsApp Stickers",
       initialRoute: StickersScreen.routeName,
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.cyan,
       ),
       debugShowCheckedModeBanner: false,
       routes: {

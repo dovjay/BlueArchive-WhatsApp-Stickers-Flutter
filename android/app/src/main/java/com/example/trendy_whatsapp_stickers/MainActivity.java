@@ -1,4 +1,4 @@
-package com.example.trendy_whatsapp_stickers;
+package com.dovjaystudio.bluearchive_whatsapp_stickers;
 
 import io.flutter.embedding.android.FlutterActivity;
 

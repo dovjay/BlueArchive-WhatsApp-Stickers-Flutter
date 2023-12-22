@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:trendy_whatsapp_stickers/constants/constants.dart';
-import 'package:trendy_whatsapp_stickers/models/sticker_data.dart';
-import 'package:trendy_whatsapp_stickers/screens/sticker_pack_info.dart';
+import 'package:bluearchive_whatsapp_stickers/constants/constants.dart';
+import 'package:bluearchive_whatsapp_stickers/models/sticker_data.dart';
+import 'package:bluearchive_whatsapp_stickers/screens/sticker_pack_info.dart';
 import 'package:whatsapp_stickers_handler/exceptions.dart';
 import 'package:whatsapp_stickers_handler/whatsapp_stickers_handler.dart';
 
@@ -58,7 +58,6 @@ class StickerPackItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final WhatsappStickersHandler _whatsappStickersHandler =
         WhatsappStickersHandler();
     return Container(
@@ -86,7 +85,8 @@ class StickerPackItem extends StatelessWidget {
               future: _whatsappStickersHandler
                   .isStickerPackInstalled(stickerPack.identifier as String),
               builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-                return snapshot.connectionState == ConnectionState.waiting || snapshot.data == null
+                return snapshot.connectionState == ConnectionState.waiting ||
+                        snapshot.data == null
                     ? const Text("+")
                     : addStickerPackButton(
                         snapshot.data as bool,

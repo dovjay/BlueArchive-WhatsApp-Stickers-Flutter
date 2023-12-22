@@ -1,11 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:trendy_whatsapp_stickers/Widgets/Drawer.dart';
-import 'package:trendy_whatsapp_stickers/constants/constants.dart';
-import 'package:trendy_whatsapp_stickers/models/sticker_data.dart';
+import 'package:bluearchive_whatsapp_stickers/Widgets/Drawer.dart';
+import 'package:bluearchive_whatsapp_stickers/constants/constants.dart';
+import 'package:bluearchive_whatsapp_stickers/models/sticker_data.dart';
 import 'package:dio/dio.dart';
-import 'package:trendy_whatsapp_stickers/widgets/sticker_pack_item.dart';
+import 'package:bluearchive_whatsapp_stickers/widgets/sticker_pack_item.dart';
 
 class StickersScreen extends StatefulWidget {
   static const routeName = '/';
@@ -55,7 +55,7 @@ class _StickersScreenState extends State<StickersScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Trendy WhatsApp Stickers"),
+        title: Text("BlueArchive WhatsApp Stickers"),
       ),
       drawer: Drawer(
         child: MyDrawer(),
@@ -63,14 +63,14 @@ class _StickersScreenState extends State<StickersScreen> {
       body: _isLoading
           ? const Center(child: CircularProgressIndicator())
           : ListView.builder(
-        itemCount: stickerData.stickerPacks!.length,
-        itemBuilder: (context, index) {
-          return StickerPackItem(
-            stickerPack: stickerData.stickerPacks![index],
-            stickerFetchType: stickerFetchType,
-          );
-        },
-      ),
+              itemCount: stickerData.stickerPacks!.length,
+              itemBuilder: (context, index) {
+                return StickerPackItem(
+                  stickerPack: stickerData.stickerPacks![index],
+                  stickerFetchType: stickerFetchType,
+                );
+              },
+            ),
     );
   }
 }

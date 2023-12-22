@@ -1,5 +1,5 @@
-name: trendy_whatsapp_stickers
-description: A new Flutter project.
+name: bluearchive_whatsapp_stickers
+description: BlueArchive ingame club sticker goes to WhatsApp
 
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -67,4 +67,5 @@ flutter:
     - sticker_packs/5/
     - sticker_packs/6/
     - sticker_packs/7/
+    - sticker_packs/8/
     - sticker_packs/sticker_packs.json

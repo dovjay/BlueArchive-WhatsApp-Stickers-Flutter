@@ -1,13 +1,13 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:trendy_whatsapp_stickers/Widgets/Drawer.dart';
-import 'package:trendy_whatsapp_stickers/constants/constants.dart';
+import 'package:bluearchive_whatsapp_stickers/Widgets/Drawer.dart';
+import 'package:bluearchive_whatsapp_stickers/constants/constants.dart';
 import 'package:whatsapp_stickers_handler/exceptions.dart';
 import 'package:whatsapp_stickers_handler/whatsapp_stickers_handler.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:dio/dio.dart';
-import 'package:trendy_whatsapp_stickers/models/sticker_data.dart';
+import 'package:bluearchive_whatsapp_stickers/models/sticker_data.dart';
 
 class StickerPackInfoScreen extends StatefulWidget {
   static const routeName = '/sticker-pack-info';
@@ -118,8 +118,7 @@ class _StickerPackInfoScreenState extends State<StickerPackInfoScreen> {
             print("INSIDE WhatsappStickersException ${e.cause}");
             var exceptionMessage = e.cause;
             ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(content: Text(exceptionMessage.toString())
-            ));
+                SnackBar(content: Text(exceptionMessage.toString())));
           } catch (e) {
             print("Exception ${e.toString()}");
           }

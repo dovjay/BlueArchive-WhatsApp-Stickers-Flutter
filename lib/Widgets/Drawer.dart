@@ -6,7 +6,7 @@ class MyDrawer extends StatelessWidget {
   static const TextStyle _menuTextColor = TextStyle(
     color: Colors.teal,
     fontSize: 14.0,
-    fontWeight:FontWeight.w500,
+    fontWeight: FontWeight.w500,
   );
 
   static const IconThemeData _iconColor = IconThemeData(
@@ -21,11 +21,13 @@ class MyDrawer extends StatelessWidget {
         padding: EdgeInsets.all(0),
         children: <Widget>[
           UserAccountsDrawerHeader(
-            accountName: Text("Trendy Stickers",
+            accountName: Text(
+              "BlueArchive Stickers",
               style: TextStyle(
-                fontSize:20.0,
-              ),),
-            accountEmail: Text("Awesome Trending Stickers"),
+                fontSize: 20.0,
+              ),
+            ),
+            accountEmail: Text("In-Game Club BlueArchive Stickers"),
 //          currentAccountPicture: Image.asset('assets/images/avatar.png'),
           ),
           ListTile(
@@ -33,9 +35,10 @@ class MyDrawer extends StatelessWidget {
               data: _iconColor,
               child: Icon(Icons.share),
             ),
-            title: Text("Share",style: _menuTextColor),
+            title: Text("Share", style: _menuTextColor),
             onTap: () {
-              Share.share("Download Best WhatsApp Stickers \n\n 👇👇👇👇👇 \nDownload Now\nhttps://play.google.com/store/apps/details?id=com.gamacrack.trending_stickers");
+              Share.share(
+                  "Download Best WhatsApp Stickers \n\n 👇👇👇👇👇 \nDownload Now\nhttps://");
             },
           ),
           ListTile(
@@ -43,10 +46,10 @@ class MyDrawer extends StatelessWidget {
               data: _iconColor,
               child: Icon(Icons.rate_review),
             ),
-            title: Text("Rating & Review",style: _menuTextColor),
+            title: Text("Rating & Review", style: _menuTextColor),
             onTap: () async {
               Navigator.of(context).pop();
-              const url = 'https://play.google.com/store/apps/details?id=com.gamacrack.trending_stickers&reviewId=0';
+              const url = 'https://';
               if (await canLaunchUrlString(url)) {
                 await launchUrlString(url);
               } else {
@@ -59,8 +62,17 @@ class MyDrawer extends StatelessWidget {
               data: _iconColor,
               child: Icon(Icons.security),
             ),
-            title: Text("Privacy Policy",style: _menuTextColor),
-            onTap: () async {},
+            title: Text("Privacy Policy", style: _menuTextColor),
+            onTap: () async {
+              Navigator.of(context).pop();
+              const url =
+                  'http://kethod.com/apps/trending-stickers/privacy-policy.html';
+              if (await canLaunchUrlString(url)) {
+                await launchUrlString(url);
+              } else {
+                throw 'Could not open App';
+              }
+            },
           ),
         ],
       ),
